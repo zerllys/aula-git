@@ -1,12 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function MostraGif(props) {
-console.log(props)
+    const [gif, addGif] = useState(false)
+
+    const showGif = () => {
+        addGif(true)
+    }
+
+    const escondeGif = () => {
+        addGif(false)
+    }
+
+
     return (
-<>
-        {<img src="https://cdn.dicionariopopular.com/imagens/nazareconfusamatematica.gif" alt="Gif"
-        />}
-</>
+    <>
+        <button onClick={showGif}>mostra</button>
+        {
+            gif && <img onClick={escondeGif} src="https://cdn.dicionariopopular.com/imagens/nazareconfusamatematica.gif" alt="Gif" />
+        }
+
+        </>
     )
 
 }
