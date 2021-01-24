@@ -61,9 +61,9 @@ function App() {
         periodo: '11/2007 - 11/2008',
         empresa: 'Hirsa Sistemas de Automação e Controle LTDA',
         local: 'Paulínia',
-        conteudo: 'Atendimento ao cliente e gestão de projetos, Processos auditados '
+        conteudo: 'Atendimento ao cliente e gestão de projetos, acompanhamento em processos auditados'
       } 
-    ]
+    ],
   }
 
   const [respAPI] = useState(fakeAPI)
