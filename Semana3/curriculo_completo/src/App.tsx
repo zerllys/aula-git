@@ -1,0 +1,78 @@
+import React,{useState} from 'react';
+import Headers from './Components/Headers/Headers/index'
+import {Header} from './Components/Headers/types/perfil'
+
+
+
+function App() {
+
+ 
+  const fakeAPI =
+  {
+    nome: 'Zerli S.F. de Lima  ',
+    ocupacao: 'React Developer Jr.',
+    resumo:'Em busca de redirecionar a carreira busquei na área de desenvolvimento uma nova inspiração' ,
+    perfilProfissional: 'Experiência em acompanhamento, planejamento e controle de atividades. Acompanhamento em auditorias internas (ISO9001).',
+    contatos: [
+      {
+        id: 1,
+        tipo: 'telefone',
+        contato: '19 98232-5443'
+      },
+      {
+        id: 2,
+        tipo: 'email',
+        contato: 'zerllys@hotmail.com'
+      }
+    ],
+    educacao: [
+      {
+        id: 1,
+        instituicao: 'Universidade São Francisco',
+        curso: 'Tecnologia em Processos Gerenciais'
+      },
+      {
+        id: 2,
+        instituicao: 'SENAI - Prof. Dr. Euryclides de Jesus Zerbini',
+        curso: 'Técnico em Desenvolvimento de Sistemas'
+      },
+      {
+        id: 3,
+        instituicao: 'Digital Inovation One',
+        curso: 'Bootcamp React'
+      }
+    ],
+    experiencia: [
+      {
+        id: 1,
+        cargo: 'Técnica em Planejamento',
+        periodo: '11/2008 - 02/2015',
+        empresa: 'Andritz Hydro Inepar',
+        local: 'Araraquara',
+        conteudo: 'Atendimento técnico e gestão de projetos e materiais'
+      },
+      {
+        id: 2,
+        cargo: 'Auxiliar Técnica',
+        periodo: '11/2007 - 11/2008',
+        empresa: 'Hirsa Sistemas de Automação e Controle LTDA',
+        local: 'Paulínia',
+        conteudo: 'Atendimento ao cliente e gestão de projetos, acompanhamento em processos auditados'
+      } 
+    ],
+  }
+
+  const {contatos,educacao,nome,ocupacao,resumo,experiencia} = fakeAPI
+
+const perfil:Header =  {
+  perfprofissional:'bla'
+}
+
+  return (
+    <div className="App">
+      < Headers info={perfil}/>
+    </div>
+  );
+}
+
+export default App;
